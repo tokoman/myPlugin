@@ -14,5 +14,6 @@
 				<plugin name="Echo" value="org.apache.cordova.plugin.Echo" />
 			</plugins>
         </config-file>
+        <source-file src="src/android/Calendar.java" target-dir="src/org/devgirl/calendar" />
     </platform>
 </plugin>
