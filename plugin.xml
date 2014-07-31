@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="org.apache.cordova.device" version="0.2.3">
-  <name>Device</name>
-  <description>Cordova Device Plugin</description>
+            id="tw.com.ace.myPlugin" version="0.0.1">
+  <name>myPlugin</name>
+  <description>this is some test</description>
   <license>Apache 2.0</license>
-  <keywords>cordova,device</keywords>
+  <keywords>cordova</keywords>
   <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="Echo">
-                <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
+                <param name="android-package" value="tw.com.ace.myPlugin.Echo"/>
             </feature>
-			<plugins>
-				<plugin name="Echo" value="org.apache.cordova.plugin.Echo" />
-			</plugins>
         </config-file>
+		<source-file src="src/Echo.java" target-dir="src/tw/com/ace/myPlugin" />
     </platform>
 </plugin>
