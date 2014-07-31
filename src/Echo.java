@@ -1,11 +1,11 @@
-    package tw.com.ace.myPlugin;
+package tw.com.ace.myPlugin;
 
-    import org.apache.cordova.CordovaPlugin;
-    import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CallbackContext;
 
-    import org.json.JSONArray;
-    import org.json.JSONException;
-    import org.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
     /**
      * This class echoes a string called from JavaScript.
@@ -16,7 +16,7 @@
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
             if (action.equals("echo")) {
                 String message = args.getString(0);
-                message += "from Echo";
+                message += "Modify from Echo";
                 this.echo(message, callbackContext);
                 return true;
             }
