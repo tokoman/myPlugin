@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util;
+import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -35,7 +36,7 @@ import android.widget.Button;
 	 
 	//取得現在時間
 	 
-	Date dt=new Date();
+	Date dt = new Date();
 	 
 	//透過SimpleDateFormat的format方法將Date轉為字串
 	 
