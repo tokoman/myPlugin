@@ -27,7 +27,7 @@ import android.widget.Button;
                 String message = args.getString(0);
                 
 		Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivity(i);
+                window.plugins.webintent.startActivity(i);
 				
 
                 this.echo(message, callbackContext);
