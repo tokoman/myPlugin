@@ -26,8 +26,28 @@ import android.widget.Button;
             if (action.equals("echo")) {
                 String message = args.getString(0);
                 
-		Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                window.plugins.webintent.startActivity(i);
+				//使用Calendar指定時間
+				Calendar calendar = Calendar.getInstance();
+				calendar.set(2014, 7, 8, 16, 30);
+
+				//建立意圖
+				Intent intent = new Intent();
+
+				//這裡的 this 是指當前的 Activity
+				//AlarmReceiver.class 則是負責接收的 BroadcastReceiver
+				intent.setClass(this, AlarmReceiver.class);
+
+				//建立待處理意圖
+				PendingIntent pending = PendingIntent.getBroadcast(context, 0, intent, 0);
+
+				//取得AlarmManager
+				AlarmManager alarm = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+
+				//設定一個警報
+				//參數1,我們選擇一個會在指定時間喚醒裝置的警報類型
+				//參數2,將指定的時間以millisecond傳入
+				//參數3,傳入待處理意圖
+				alarm.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pending);
 				
 
                 this.echo(message, callbackContext);
