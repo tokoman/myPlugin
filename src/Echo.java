@@ -1,4 +1,4 @@
-    package org.apache.cordova.plugin;
+    package tw.com.ace.myPlugin;
 
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
@@ -16,6 +16,7 @@
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
             if (action.equals("echo")) {
                 String message = args.getString(0);
+                message += "from Echo";
                 this.echo(message, callbackContext);
                 return true;
             }
