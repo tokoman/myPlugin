@@ -26,7 +26,7 @@ import android.widget.Button;
             if (action.equals("echo")) {
                 String message = args.getString(0);
                 
-				Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivity(i);
 				
 
