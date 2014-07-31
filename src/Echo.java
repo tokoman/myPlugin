@@ -1,4 +1,4 @@
-    package org.apache.cordova.plugin;
+    package tw.com.ace.myPlugin;
 
     import org.apache.cordova.CordovaPlugin;
     import org.apache.cordova.CallbackContext;
