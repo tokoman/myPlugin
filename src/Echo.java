@@ -48,7 +48,7 @@ import android.widget.Button;
 			    alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+5*1000, sender);
 				
 				*/
-				Toast.makeText(MainActivity.this,"訊息",Toast.LENGTH_SHORT).show(); 
+				Toast.makeText(super.this,"訊息",Toast.LENGTH_SHORT).show(); 
 
                 this.echo(message, callbackContext);
                 return true;
