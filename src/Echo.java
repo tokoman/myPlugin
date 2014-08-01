@@ -49,7 +49,8 @@ import android.widget.Toast;
 			    alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+5*1000, sender);
 				
 				*/
-				Toast.makeText(this,"訊息",Toast.LENGTH_SHORT).show(); 
+				Context context=this.cordova.getActivity().getApplicationContext();
+				Toast.makeText(context,"訊息",Toast.LENGTH_SHORT).show(); 
 
                 this.echo(message, callbackContext);
                 return true;
