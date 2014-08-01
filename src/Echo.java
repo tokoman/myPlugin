@@ -19,6 +19,7 @@ import android.provider.MediaStore;
 import android.provider.Contacts.People;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
     /**
      * This class echoes a string called from JavaScript.
