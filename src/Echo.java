@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,20 +30,27 @@ import android.widget.Button;
             if (action.equals("echo")) {
                 String message = args.getString(0);
                 
-				//先行定義時間格式
- 
-	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-	 
-	//取得現在時間
-	 
-	Date dt = new Date();
-	 
-	//透過SimpleDateFormat的format方法將Date轉為字串
-	 
-		String dts=sdf.format(dt);
+				/*
+				//操作：发送一个广播，广播接收后Toast提示定时操作完成     
+				Intent intent = new Intent(Main.this, alarmreceiver.class);
+    			intent.setAction("short");
+			    PendingIntent sender = PendingIntent.getBroadcast(Main.this, 0, intent, 0);
+    
+			    //设定一个五秒后的时间
+    			//Calendar calendar=Calendar.getInstance();
+			    //calendar.setTimeInMillis(System.currentTimeMillis());
+    			//calendar.add(Calendar.SECOND, 5);
+    
+			    AlarmManager alarm=(AlarmManager)getSystemService(ALARM_SERVICE);
+			    //alarm.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
+			    
+				//或者以下面方式简化
+			    alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+5*1000, sender);
 				
+				*/
+				Toast.makeText(MainActivity.this,"訊息",Toast.LENGTH_SHORT).show(); 
 
-                this.echo(dts, callbackContext);
+                this.echo(message, callbackContext);
                 return true;
             }
             return false;
