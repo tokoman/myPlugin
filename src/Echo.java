@@ -12,7 +12,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.app.PendingIntent;
-import android.content;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
