@@ -51,7 +51,7 @@ import android.widget.Toast;
 				*/
 				
 				Context context=this.cordova.getActivity().getApplicationContext();
-				Toast.makeText(getContext(),"訊息",Toast.LENGTH_SHORT).show(); 
+				Toast.makeText(this.getContext(),"訊息",Toast.LENGTH_SHORT).show(); 
 
                 this.echo(message, callbackContext);
                 return true;
