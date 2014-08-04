@@ -12,8 +12,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
+import android.content;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -50,8 +49,9 @@ import android.widget.Toast;
 			    alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+5*1000, sender);
 				
 				*/
+				
 				Context context=this.cordova.getActivity().getApplicationContext();
-				Toast.makeText(context,"訊息",Toast.LENGTH_SHORT).show(); 
+				Toast.makeText(getContext(),"訊息",Toast.LENGTH_SHORT).show(); 
 
                 this.echo(message, callbackContext);
                 return true;
