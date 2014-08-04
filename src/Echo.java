@@ -12,7 +12,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.app.PendingIntent;
-import android.content;
+//import android.content;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -50,8 +50,8 @@ import android.widget.Toast;
 				
 				*/
 				
-				Context context=this.cordova.getActivity().getApplicationContext();
-				Toast.makeText(this.getContext(),"訊息",Toast.LENGTH_SHORT).show(); 
+				//Context context=this.cordova.getActivity().getApplicationContext();
+				Toast.makeText(this.cordova.getActivity().getApplicationContext();,message,Toast.LENGTH_SHORT).show(); 
 
                 this.echo(message, callbackContext);
                 return true;
